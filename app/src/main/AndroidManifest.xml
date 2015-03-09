@@ -8,13 +8,17 @@
         android:label="TEMP MEMS"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name" >
 
         </activity>
         <activity
             android:name=".IIActivity"
             android:label="@string/title_activity_ii" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="LIST VIEW" >
         </activity>
         <activity
             android:name=".ViewEqActivity"

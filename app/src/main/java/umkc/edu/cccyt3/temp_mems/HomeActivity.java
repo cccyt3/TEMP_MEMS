@@ -5,34 +5,29 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class SplashScreen extends ActionBarActivity {
+public class HomeActivity extends ActionBarActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_home);
 
-        Thread starttimer = new Thread() {
-            public void run() {
-                try {
-                    sleep(5000);
-                    Intent i = new Intent(SplashScreen.this, HomeActivity.class);
-                    startActivity(i);
-                    finish();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        starttimer.start();
+        View IIbutton = findViewById(R.id.IIbutton);
+        IIbutton.setOnClickListener(this);
+
+        View Viewbutton = findViewById(R.id.Viewbutton);
+        Viewbutton.setOnClickListener(this);
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_splash_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
 
@@ -49,5 +44,19 @@ public class SplashScreen extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.IIbutton:
+                Intent IIintent = new Intent(this,MainActivity.class);
+                this.startActivity(IIintent);
+                break;
+            case R.id.Viewbutton:
+                Intent Viewintent = new Intent(this,ViewEqActivity.class);
+                this.startActivity(Viewintent);
+                break;
+        }
     }
 }
