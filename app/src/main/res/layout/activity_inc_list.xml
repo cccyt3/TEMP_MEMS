@@ -10,6 +10,6 @@
         <EditText android:layout_weight="1" android:id="@+id/editText1" android:layout_height="wrap_content" android:layout_width="wrap_content">
             <requestFocus></requestFocus>
         </EditText>
-        <Button android:text="Add" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+        <Button android:text="Add" android:id="@+id/add_list_button" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
     </LinearLayout>
 </LinearLayout>

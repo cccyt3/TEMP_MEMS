@@ -17,7 +17,7 @@ public class SplashScreen extends ActionBarActivity {
         Thread starttimer = new Thread() {
             public void run() {
                 try {
-                    sleep(5000);
+                    sleep(3000);
                     Intent i = new Intent(SplashScreen.this, HomeActivity.class);
                     startActivity(i);
                     finish();

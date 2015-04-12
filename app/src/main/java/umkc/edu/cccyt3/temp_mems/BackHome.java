@@ -1,24 +1,32 @@
 package umkc.edu.cccyt3.temp_mems;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+/**
+ * Created by CCColeman on 3/14/2015.
+ */
+public class BackHome extends ActionBarActivity implements View.OnClickListener {
 
-public class IIActivity extends ActionBarActivity {
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ii);
+        setContentView(R.layout.activity_home);
     }
+    @Override
+    public void onClick(View v) {
 
+                Intent intent = new Intent(this, HomeActivity.class);
+                this.startActivity(intent);
 
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_ii, menu);
+        getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
 
@@ -30,9 +38,7 @@ public class IIActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }

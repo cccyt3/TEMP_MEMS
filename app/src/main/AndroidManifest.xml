@@ -13,16 +13,16 @@
 
         </activity>
         <activity
-            android:name=".IIActivity"
-            android:label="@string/title_activity_ii" >
-        </activity>
-        <activity
-            android:name=".MainActivity"
+            android:name=".IncListActivity"
             android:label="LIST VIEW" >
         </activity>
         <activity
             android:name=".ViewEqActivity"
             android:label="@string/title_activity_view_eq" >
+        </activity>
+        <activity
+            android:name=".SpecEntry"
+            android:label="Device Detail Entry" >
         </activity>
         <activity
             android:name=".SplashScreen"

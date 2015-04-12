@@ -50,7 +50,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.IIbutton:
-                Intent IIintent = new Intent(this,MainActivity.class);
+                Intent IIintent = new Intent(this,IncListActivity.class);
                 this.startActivity(IIintent);
                 break;
             case R.id.Viewbutton:
@@ -59,4 +59,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
                 break;
         }
     }
+
+
 }
