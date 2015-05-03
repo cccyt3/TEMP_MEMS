@@ -15,6 +15,6 @@ public class SpecEntry extends ActionBarActivity implements View.OnClickListener
     }
     @Override
     public void onClick(View v) {
-
+//enter exception code for entry
     }
 }

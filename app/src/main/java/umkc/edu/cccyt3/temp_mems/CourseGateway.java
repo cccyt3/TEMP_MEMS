@@ -39,7 +39,7 @@ public class CourseGateway {
 		// key for new record.
 		DatabaseHelper dbHelper = new DatabaseHelper(context);
 		SQLiteDatabase db = dbHelper.getWritableDatabase();
-
+        //throw some sort of error if it can't write to the database
 		ContentValues values = new ContentValues();
 		values.put(DatabaseHelper.FIELD_COURSE_NAME, courseName);
 		long cs490_id = db.insertOrThrow(DatabaseHelper.COURSES_TABLE, null, values);

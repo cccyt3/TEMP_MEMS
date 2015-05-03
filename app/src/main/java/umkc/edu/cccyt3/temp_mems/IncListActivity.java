@@ -44,14 +44,14 @@ public class IncListActivity extends ActionBarActivity implements OnClickListene
 
         // If no courses, add some
         if (courses.size() == 0) {
-            long SE1_course_id = model.insertCourse("CS449");
-            long SE2_course_id = model.insertCourse("CS451");
+            long SE1_course_id = model.insertCourse("Vent");
+            long SE2_course_id = model.insertCourse("Defib");
 //string modelText = modelTextField.gettext
 //  model.insterCourse(modelText);
-            model.insertAssignment(SE1_course_id, "Iteration 1");
-            model.insertAssignment(SE1_course_id, "Iteration 2");
+            model.insertAssignment(SE1_course_id, "Drager");
+            model.insertAssignment(SE1_course_id, "Maquet");
 
-            model.insertAssignment(SE2_course_id, "Lab 1");
+            model.insertAssignment(SE2_course_id, "R series");
 
             courses = model.getCourses();
         }
